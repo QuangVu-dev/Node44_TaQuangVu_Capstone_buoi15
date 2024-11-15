@@ -1,0 +1,368 @@
+{
+	"info": {
+		"_postman_id": "1332c377-4006-42a8-81b8-2ccfd4a64d2d",
+		"name": "Node44_capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38034220"
+	},
+	"item": [
+		{
+			"name": "REGISTER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ho_ten\":\"Vincent\",\n    \"email\":\"vincent@gmail.com\",\n    \"mat_khau\":\"123456\",\n    \"tuoi\":\"28\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"vincent@gmail.com\",\n    \"mat_khau\":\"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET LIST OF IMAGE FROM DATABASE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/image/list-of-image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"image",
+						"list-of-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET LIST OF IMAGE BY IMAGE NAME",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/image/get-list-of-image-by-name?ten_hinh=Hinh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"image",
+						"get-list-of-image-by-name"
+					],
+					"query": [
+						{
+							"key": "ten_hinh",
+							"value": "Hinh"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET IMAGE INFO AND CREATOR BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/image/get-image-info-and-creator-by-id/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"image",
+						"get-image-info-and-creator-by-id",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET COMMENT BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/image/get-comment-by-id/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"image",
+						"get-comment-by-id",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CHECK IMAGE BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/image/check-image/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"image",
+						"check-image",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "COMMENT WITH IMAGE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nguoi_dung_id\":\"9\",\n    \"hinh_id\":\"8\",\n    \"noi_dung\":\"Bình luận đầu tiên về hình này\",\n    \"ngay_binh_luan\":\"2024-11-22\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/image/comment-with-image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"image",
+						"comment-with-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USERS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/get-users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"get-users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET LIST SAVED IMAGES BY ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJJZCI6MjN9LCJpYXQiOjE3MzE1MTYxMjQsImV4cCI6MTczMjEyMDkyNH0.xTNe1siRBn-j8HnJFmi6xpAxoutZE6ZnAz1R11cGC_Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/users/get-saved-images",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"get-saved-images"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET IMAGES BY USER ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJJZCI6MjN9LCJpYXQiOjE3MzE1MTYxMjQsImV4cCI6MTczMjEyMDkyNH0.xTNe1siRBn-j8HnJFmi6xpAxoutZE6ZnAz1R11cGC_Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/users/get-images-by-user/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"get-images-by-user",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE IMAGE BY ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJJZCI6MjN9LCJpYXQiOjE3MzE1MTYxMjQsImV4cCI6MTczMjEyMDkyNH0.xTNe1siRBn-j8HnJFmi6xpAxoutZE6ZnAz1R11cGC_Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/users/delete-image-by-id/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"delete-image-by-id",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD IMAGE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJJZCI6MjN9LCJpYXQiOjE3MzE1MTYxMjQsImV4cCI6MTczMjEyMDkyNH0.xTNe1siRBn-j8HnJFmi6xpAxoutZE6ZnAz1R11cGC_Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/image/add-image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"image",
+						"add-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE USER INFOR",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJJZCI6MjN9LCJpYXQiOjE3MzE1MTYxMjQsImV4cCI6MTczMjEyMDkyNH0.xTNe1siRBn-j8HnJFmi6xpAxoutZE6ZnAz1R11cGC_Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ho_ten\": \"Nguyen Anh Updated\",\n  \"tuoi\": 26,\n  \"anh_dai_dien\": \"path/to/new_image.jpg\",\n  \"mat_khau\": \"new_password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/update-user-infor/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"update-user-infor",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
